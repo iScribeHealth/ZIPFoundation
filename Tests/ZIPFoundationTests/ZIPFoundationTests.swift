@@ -35,7 +35,7 @@ class ZIPFoundationTests: XCTestCase, @unchecked Sendable {
     }()
 
     static var resourceDirectoryURL: URL {
-        var resourceDirectoryURL = URL(fileURLWithPath: #file)
+        var resourceDirectoryURL = URL(fileURLWithPath: #filePath)
         resourceDirectoryURL.deleteLastPathComponent()
         resourceDirectoryURL.appendPathComponent("Resources")
         return resourceDirectoryURL
