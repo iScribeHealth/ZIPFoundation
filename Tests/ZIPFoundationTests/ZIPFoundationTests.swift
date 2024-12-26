@@ -16,12 +16,13 @@ enum AdditionalDataError: Error {
     case invalidDataError
 }
 
-class ZIPFoundationTests: XCTestCase {
+class ZIPFoundationTests: XCTestCase, @unchecked Sendable {
+
     class var testBundle: Bundle {
         return Bundle(for: self)
     }
 
-    static var tempZipDirectoryURL: URL = {
+    static let tempZipDirectoryURL: URL = {
         let processInfo = ProcessInfo.processInfo
         var tempZipDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
         tempZipDirectory.appendPathComponent("ZipTempDirectory")
