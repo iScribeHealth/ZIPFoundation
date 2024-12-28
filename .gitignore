@@ -68,3 +68,4 @@ fastlane/test_output
 
 # Swift Package Manager
 .swiftpm
+.DS_Store
