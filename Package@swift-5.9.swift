@@ -3,10 +3,7 @@ import PackageDescription
 
 #if canImport(Compression)
 let targets: [Target] = [
-    .target(name: "ZIPFoundation",
-            resources: [
-                .copy("Resources/PrivacyInfo.xcprivacy")
-            ]),
+    .target(name: "ZIPFoundation"),
     .testTarget(name: "ZIPFoundationTests", dependencies: ["ZIPFoundation"])
 ]
 #else
